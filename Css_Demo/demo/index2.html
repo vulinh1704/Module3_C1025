@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /* h2 {
+            color: pink; 
+         } */
+
+        #xinchao { 
+            /* id chỉ sử dụng ứng 1 thẻ và id phải là duy nhất */
+            color: rgb(53, 121, 53);
+        }    
+        
+        .detail {
+            /* gom nhóm cho các thẻ cùng css */
+            color: chocolate;
+        }
+
+    </style> -->
+
+    <style>
+        .cha {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        /* chỉ những class .con nằm trong class .cha mới ăn css này */
+        /* .cha .con { 
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border: 1px solid black;
+        } */
+
+        /* chỉ những class .con tầng đầu tiên nằm trong clas .cha mới ăn css này */
+        /* .cha > .con { 
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border: 1px solid black;
+        } */
+
+        .me {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* quy định css cho 1 tập hợp các bộ chọn*/
+        /* p, .text, span, #p_text, .cha .con, .me {
+            color: palevioletred;
+        } */
+
+        /* bộ chọn kết hợp liền kề */
+        .ho + span {
+            color: red;
+        }
+
+
+        button:hover {
+            background-color: red;
+            color: white;
+            font-weight: 900;
+        }
+
+
+        .menu {
+            border: solid 1px black;
+        }
+
+       .option:last-child {
+        color: yellow;
+       }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <p class="option">Option 1</p>
+        <p class="option">Option 2</p>
+        <p class="option">Option 3</p>
+    </div>
+
+    <div class="menu">
+        <span class="option">Option 1</span>
+        <p class="option">Option 2</p>
+        <p class="option">Option 3</p>
+    </div>
+
+    <!-- <div class="menu">
+        <span>Option 1</span>
+        <p>Option 2</p>
+        <p>Option 3</p>
+    </div> -->
+
+    <button>Submit</button>
+    <!-- <h2 id="xinchao">Xin chào mọi người</h2>
+    <h2 class="detail">Tôi tên là Ning</h2>
+    <span class="detail">Vu Ning</span>
+    <p class="detail">Viểt văn</p> -->
+
+    <div>
+        <p class="ho">Truong Dang</p>
+        <span>Vu Linh</span>
+        <p class="ho">Pham Van</p>
+        <span>A</span>
+        <p>Pham Van</p>
+        <span>B</span>
+        <span>D</span>
+        <span>E</span>
+    </div>
+
+
+    <!-- <p>Văn bản</p>
+    <div class="text">Văn bản div</div>
+    <span>Văn bản span</span>
+    <div id="p_text">Văn bản p</div> -->
+
+    <div class="cha">
+        <div class="con"></div>
+    </div>
+
+    <div class="cha">
+        <div class="con"></div>
+        <div>
+            <div class="con"></div>
+        </div>
+    </div>
+
+    <div class="me">
+        <div class="con"></div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        .hello {
+            /* thuộc tính cho phép quy định with và heigth khi điền giá trị sẽ là độ dài và độ rộng cho cả khối (border + padding + content) */
+            box-sizing: border-box; 
+            /* quy định dài rộng cho content */
+            width: 200px;
+            height: 200px;
+            background-color: peachpuff;
+            /* border: đường viền */
+            border: 10px green solid; 
+                /*Các đối số:  độ rộng đường viền   màu   loại border*/
+            /* padding: Khoảng cách từ content tới border */
+            /* padding: 15px 10px; */
+            padding: 20px;
+            /*margin: Khoảng các so với các thành phần xung quanh */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello">
+        <!-- Content: là những thành phần nằm trong khối -->
+        Content
+    </div>
+</body>
+</html>
