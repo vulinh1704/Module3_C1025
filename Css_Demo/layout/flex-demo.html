@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+        .main {
+            height: 300px;
+            width: 100%;
+            border: 1px solid black;
+            /* thuộc tính quy định 1 flexbox */
+            display: flex;
+
+            /* quy đinh chiều hiển thị của các item bên trong, mặc định là row (theo hàng) */
+            flex-direction: row;
+
+            /* Quy định các phần tử có xuống hàng hay không, mặc định là no-wrap */
+            flex-wrap: wrap;
+
+            /* Quy định khoảng cách giữa các item theo chiều của flex-direction (case này: hàng), mặc định là start */
+            justify-content: space-around;
+
+            /* QUy định khoảng cách giữa các item theo chiều vuông góc với flex-direction (case này: cột), mặc định là start */
+            align-items: center;
+        }
+
+        .item {
+            width: 23%;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+</body>
+
+</html>
