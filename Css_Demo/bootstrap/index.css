@@ -1,0 +1,9 @@
+.color-btn {
+    background-color: pink;
+    outline: 0;
+    border: 0;
+}
+
+.color-btn:hover {
+    background-color: palevioletred;
+}
