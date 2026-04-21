@@ -13,6 +13,12 @@
 </head>
 <body>
 <h1>Welcome to GS25</h1>
+<form action="/products" method="GET">
+    <%-- /products?page=home&keyword=...   --%>
+    <input type="hidden" name="page" value="home">
+    <input type="text" name="keyword" placeholder="Search name">
+    <button>Submit</button>
+</form>
 <a href="/products?page=add">Add Product</a>
 <hr>
 <table border="1">
@@ -30,9 +36,10 @@
             <td>${item.price}</td>
             <td><img src="${item.image}" alt=""></td>
             <td><a href="/products?page=edit&id=${item.id}">Edit</a></td>
-            <td><a href="">Delete</a></td>
+            <td><a href="/products?page=delete&id=${item.id}">Delete</a></td>
         </tr>
     </c:forEach>
+
 </table>
 </body>
 </html>

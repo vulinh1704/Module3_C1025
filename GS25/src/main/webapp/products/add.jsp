@@ -8,8 +8,6 @@
 <a href="/products?page=home">Home</a>
 <hr>
 <form action="/products?action=add" method="POST">
-    <input type="number" name="id" placeholder="Id">
-    <br>
     <input type="text" name="name" placeholder="Name">
     <br>
     <input type="number" name="price" placeholder="Price">

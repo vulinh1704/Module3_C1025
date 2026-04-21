@@ -31,9 +31,18 @@ public class ProductController extends HttpServlet {
             case "edit":
                 showEditPage(req, resp);
                 break;
+            case "delete":
+                delete(req, resp);
+                break;
             default:
                 showNotFound(req, resp);
         }
+    }
+
+    private void delete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        int idDelete = Integer.parseInt(req.getParameter("id"));
+        productService.deleted(idDelete);
+        resp.sendRedirect("/products?page=home");
     }
 
     private void showEditPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -46,7 +55,8 @@ public class ProductController extends HttpServlet {
 
     private void showHomePage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("products/home.jsp");
-        List<Product> products = productService.getAll();
+        String keyword = req.getParameter("keyword");
+        List<Product> products = productService.getByNameContains(keyword);
         req.setAttribute("products", products);
         dispatcher.forward(req, resp);
     }
@@ -88,11 +98,10 @@ public class ProductController extends HttpServlet {
     }
 
     private void addProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       int id = Integer.parseInt(req.getParameter("id"));
        String name = req.getParameter("name");
        double price = Double.parseDouble(req.getParameter("price"));
        String image = req.getParameter("image");
-       Product newProduct = new Product(id, name, price, image);
+       Product newProduct = new Product(name, price, image);
        productService.add(newProduct);
        resp.sendRedirect("/products?page=home");
     }
@@ -103,5 +112,5 @@ public class ProductController extends HttpServlet {
 Nhiệm vụ cần hoàn thành:
 Thực hành theo demo
 Hoàn thành năng xóa
-Thêm tính năng tìm kiếm: tên sản phẩm gần đúng, khoảng giá
+Thêm tính năng tìm kiếm: tên sản phẩm gần đúng, khoảng giá, khoảng số lượng
  */
