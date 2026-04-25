@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,6 +17,15 @@
     <br>
     <input type="text" name="image" placeholder="Image URL" value="${foundProduct.image}">
     <br>
+    <select name="categoryId">
+        <c:forEach var="item" items="${categories}">
+            <option value="${item.id}"
+            <c:if test="${item.id == foundProduct.category.id}">
+                selected
+            </c:if>
+            >${item.name}</option>
+        </c:forEach>
+    </select>
     <button>Submit</button>
 </form>
 </body>

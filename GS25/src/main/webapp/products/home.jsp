@@ -27,6 +27,7 @@
         <th>Name</th>
         <th>Price</th>
         <th>Image</th>
+        <th>Category</th>
         <th colspan="2">Action</th>
     </tr>
     <c:forEach items="${products}" var="item">
@@ -35,6 +36,7 @@
             <td>${item.name}</td>
             <td>${item.price}</td>
             <td><img src="${item.image}" alt=""></td>
+            <td>${item.category.name}</td>
             <td><a href="/products?page=edit&id=${item.id}">Edit</a></td>
             <td><a href="/products?page=delete&id=${item.id}">Delete</a></td>
         </tr>
