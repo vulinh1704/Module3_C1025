@@ -26,3 +26,19 @@ Server tạo 1 session ID
 Trình duyệt lưu ID này (thường bằng cookie)
 Mỗi lần gửi request → gửi kèm session ID
 Server dùng ID → lấy đúng dữ liệu của bạn
+
+======
+Ghép bảo mật vào bài kiểm tra;
+
+👉 Gợi ý case study (Nên sử dụng AI ~ kiểm soát AI):
++ Bán hàng
++ Blog 
++ Thư viện
+Các bước làm case study:
++ Nêu ý tưởng (chọn chủ đề)
++ Phân tích các thực thể -> thiết kế database -> tạo database (tương đối)
++ Thiết kế giao diện (tham khảo các website lớn) -> sử dụng css thuần hoặc bootstrap để xây dựng giao diện
+  (Dễ nhìn, dễ thao tác)
++ Ghép logic hệ thống với Java Servlet
+  * Nên ghép bảo mật ngay từ đầu.
+  * Nếu không cần thiết cần user có thể ghép bảo mật sau.

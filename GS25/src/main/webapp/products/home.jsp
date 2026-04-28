@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>Welcome to GS25</h1>
+<a href="/auth?page=logout">Logout</a>
 <form action="/products" method="GET">
     <%-- /products?page=home&keyword=...   --%>
     <input type="hidden" name="page" value="home">
